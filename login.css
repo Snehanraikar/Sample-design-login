@@ -15,8 +15,8 @@ body {
 /* Container Styling */
 .container {
   text-align: center;
-  width: 1300px;
-  height: 800px;
+  width: 50%;
+  height: 30%;
   padding: 20px;
   margin-top: 15vh;
   border: 1px solid #ccc;
