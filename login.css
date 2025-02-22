@@ -1,0 +1,105 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+  background-image: url('./index-background.jpg'); /* Set the background image */
+  background-size: cover; /* Makes the background image cover the entire screen */
+  background-position: center; /* Centers the background image */
+  position: relative;
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  width: 1300px;
+  height: 800px;
+  padding: 20px;
+  margin-top: 15vh;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Black shadow effect */
+}
+
+
+input {
+  width: 90%;
+  padding: 20px;
+  margin: 40px 40px;
+  margin-left: 40px;
+  border-color: beige; 
+  font-size: 28px;
+  border-radius: 50px;
+  color: rgb(8, 8, 8); /* Ensures text inside input is white */
+}
+
+
+/* Button Styling */
+button {
+  padding: 20px 20px;
+  width: 280px;
+  height: 90px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 29px;
+  margin-top: 70px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Link Styling */
+a {
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Heading Styling */
+h2 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 70px;
+  color: white;
+}
+
+/* Falling round particles */
+.falling-particle {
+  position: absolute;
+  top: -10px;
+  width: 15px;
+  height: 15px;
+  background-color: #f9f5fc; /* Neon Purple */
+  border-radius: 50%; /* Makes the particle round */
+  animation: fall 3s infinite linear;
+  pointer-events: none;
+}
+
+p{
+  color: white;
+  font-size: 22px;
+}
+
+/* Particle fall animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.5;
+  }
+}
