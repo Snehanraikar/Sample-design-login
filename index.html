@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ 
+  <div class="container">
+    <h2>LOGIN</h2>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+</body>
+<script>
+  // Create particles falling from top to bottom
+  function createFallingParticles() {
+    const body = document.body;
+    const particleCount = 100; // Number of particles to create
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('falling-particle');
+      
+      // Randomize the left position of each particle
+      particle.style.left = Math.random() * 100 + 'vw';  // position within the viewport width
+      particle.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random animation duration
+
+      // Append particle to the body
+      body.appendChild(particle);
+      
+      // Remove the particle once animation completes
+      particle.addEventListener('animationend', () => {
+        particle.remove();
+      });
+    }
+  }
+
+  // Initialize particles on page load
+  window.onload = function() {
+    createFallingParticles();
+  };
+</script>
+
+</html>
